@@ -48,7 +48,7 @@
         img:active {
             animation: pulse 1s infinite;
         }
-        .telegram-button {
+                .telegram-button {
             width: 60px;
             height: 60px;
             border-radius: 50%;
@@ -60,6 +60,22 @@
             box-shadow: 0 0 20px rgba(147, 112, 219, 0.4);
             transition: all 0.3s ease;
             margin-top: 20px;
+        }
+        .telegram-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px rgba(147, 112, 219, 0.6);
+        }
+        .telegram-button svg {
+            color: white;
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .telegram-button {
+            animation: float 3s ease-in-out infinite;
         }
         /* Стили для модального окна */
         .modal-overlay {
